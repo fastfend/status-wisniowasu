@@ -3,14 +3,17 @@ import containerStyles from "../styles/components/statusbox.module.scss"
 import formurlencoded from 'form-urlencoded';
 import monitors from '../../monitors.json'
 import ReactTooltip from 'react-tooltip'
-
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loaders'
+import '../styles/components/loader.scss';
 export default class StatusBox extends React.Component
 {
     constructor(props) {
         super(props);
         this.state = 
         {
-            boxes: []
+            boxes: [],
+            loading: true
         }
       }
 
@@ -21,19 +24,18 @@ export default class StatusBox extends React.Component
         var difference_In_Time = (new Date - new Date(data.create_datetime*1000));
         var difference_In_Days = difference_In_Time / (1000 * 3600 * 24); 
         var daysFromStart = Math.ceil(difference_In_Days)+1;
-        console.log(uptimes.length);
         var now = new Date;
         for (var i = 0; i < uptimes.length; i++)
         {
             
             if(daysFromStart <= i)
             {
-                render.unshift(<div></div>)
+                render.unshift(<div className={containerStyles.bar}></div>)
             }
             else
             {
                 var uptime = "Data: " + now.getDate() + "." + now.getMonth() + "\nUptime: " + uptimes[i] + "%";
-                render.unshift(<div data-for={data.id} data-tip={uptime} style={{background: 'linear-gradient(0deg, rgb(46,204,64)' + uptimes[i] + '%, rgb(255,65,54) '  + uptimes[i] + '%)'}}></div>)
+                render.unshift(<div data-for={data.id} data-tip={uptime} className={containerStyles.bar} style={{background: 'linear-gradient(0deg, rgb(46,204,64)' + uptimes[i] + '%, rgb(255,65,54) '  + uptimes[i] + '%)'}}></div>)
                 now.setDate(now.getDate() - 1);
             }
         }
@@ -65,7 +67,6 @@ export default class StatusBox extends React.Component
             monitors: id,
             custom_uptime_ranges: timeset
         }
-        console.log(timeset)
         const response = await this.postData('https://api.uptimerobot.com/v2/getMonitors', data);
         return response.monitors[0];
     }
@@ -74,9 +75,9 @@ export default class StatusBox extends React.Component
     componentDidMount() {
         this.getStatusData(this.props.id, this.props.timeset)
         .then((data) => {
-            console.log(data)
             this.setState({
-                boxes: this.createStatus(data)
+                boxes: this.createStatus(data),
+                loading: false
               })
             ReactTooltip.rebuild()
         });
@@ -92,7 +93,7 @@ export default class StatusBox extends React.Component
                     <span className={containerStyles.status_name_subtitle}>{this.props.subtitle}</span>
                 </div>
                 <div className={containerStyles.status_monthstat}>
-                    {this.state.boxes}
+                    {this.state.loading ? <Loader type="line-scale" active={true} /> : this.state.boxes}
                     <ReactTooltip
                         id={this.props.id}
                         className={containerStyles.status_tooltip}
