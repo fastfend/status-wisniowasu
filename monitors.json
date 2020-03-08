@@ -1,0 +1,21 @@
+{
+    "api_key": "ur879703-fdb80f8758ca4266e29aa6a4",
+    "monitors":
+    [
+        {
+            "id": "784436272",
+            "title": "Strona główna",
+            "subtitle" : "WiśniowaSU"
+        },
+        {
+            "id": "784469769",
+            "title": "Serwerownia",
+            "subtitle" : "Urządzenia sieciowe"
+        },
+        {
+            "id": "784469773",
+            "title": "Mikrotik",
+            "subtitle" : "Urządzenia sieciowe"
+        }
+    ]
+}
