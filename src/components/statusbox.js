@@ -3,7 +3,6 @@ import containerStyles from "../styles/components/statusbox.module.scss"
 import formurlencoded from 'form-urlencoded';
 import monitors from '../../monitors.json'
 import ReactTooltip from 'react-tooltip'
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loaders'
 import '../styles/components/loader.scss';
 export default class StatusBox extends React.Component
