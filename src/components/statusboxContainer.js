@@ -5,15 +5,6 @@ import StatusBox from '../components/statusbox'
 
 export default class StatusBoxContainer extends React.Component
 {
-    renderStatusBoxes = () =>
-    {
-        let statusboxList = [];
-        settings.monitors.forEach(element => {
-            statusboxList.push(<StatusBox title="Serwerownia" subtitle="Urządzenia sieciowe"/>)
-        });
-        return statusboxList
-    }
-
     getTimeSets = () =>
     {
         let timesets = [];
@@ -35,9 +26,12 @@ export default class StatusBoxContainer extends React.Component
 
     render() {
         const statusBoxes = settings.monitors.map(element => {
-            return (
-                <StatusBox title={element.title} subtitle={element.subtitle} id={element.id} timeset={this.getTimeSets()}/>
-            )
+            if(element.type === "standalone")
+            {
+                return (
+                    <StatusBox title={element.title} subtitle={element.subtitle} id={element.id} timeset={this.getTimeSets()}/>
+                )
+            }
         });
         return(
             <div id="status_box">

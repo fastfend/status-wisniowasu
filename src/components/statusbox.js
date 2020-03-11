@@ -22,7 +22,7 @@ export default class StatusBox extends React.Component
         let uptimes = data.custom_uptime_ranges.split("-");
         var difference_In_Time = (new Date - new Date(data.create_datetime*1000));
         var difference_In_Days = difference_In_Time / (1000 * 3600 * 24); 
-        var daysFromStart = Math.ceil(difference_In_Days)+1;
+        var daysFromStart = Math.ceil(difference_In_Days);
         var now = new Date;
         for (var i = 0; i < uptimes.length; i++)
         {
@@ -33,7 +33,7 @@ export default class StatusBox extends React.Component
             }
             else
             {
-                var uptime = "Data: " + now.getDate() + "." + now.getMonth() + "\nUptime: " + uptimes[i] + "%";
+                var uptime = "Data: " + now.getDate() + " " + now.toLocaleString('default', { month: 'long' }) + " Uptime: " + uptimes[i] + "%";
                 render.unshift(<div data-for={data.id} data-tip={uptime} className={containerStyles.bar} style={{background: 'linear-gradient(0deg, rgb(46,204,64)' + uptimes[i] + '%, rgb(255,65,54) '  + uptimes[i] + '%)'}}></div>)
                 now.setDate(now.getDate() - 1);
             }
