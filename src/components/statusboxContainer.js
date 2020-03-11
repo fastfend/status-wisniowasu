@@ -1,5 +1,5 @@
 import React from "react"
-import containerStyles from "../styles/components/statusbox.module.scss"
+import containerStyles from "../styles/components/statusboxcontainer.module.scss"
 import settings from '../../monitors.json'
 import StatusBox from '../components/statusbox'
 
@@ -34,8 +34,11 @@ export default class StatusBoxContainer extends React.Component
             }
         });
         return(
-            <div id="status_box">
+            <div id={containerStyles.container}>
                 { statusBoxes }
+                <div>
+                    
+                </div>
             </div>
         )
       }
