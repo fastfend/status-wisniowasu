@@ -24,12 +24,14 @@
         {
             grid-area: 2 / 1 / 3 / 2;
             height: 50px;
-            width: 100%;
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
             align-content: stretch;
             align-items: center;
+            @media (max-width: 650px) {
+                margin: 0 15px;
+            }
             div
             {
                 height: 20px;
@@ -38,6 +40,37 @@
                 margin: 5px;
                 background-color: #c1c1c1;
                 box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+                @media (max-width: 650px) {
+                    margin: 5px auto;
+                }
+                @media (max-width: 600px) {
+                    width: 9px;
+                    height: 20px;
+                }
+                @media (max-width: 520px) {
+                    width: 8px;
+                    height: 20px;
+                }
+                @media (max-width: 480px) {
+                    width: 7px;
+                    height: 19px;
+                }
+                @media (max-width: 440px) {
+                    width: 7px;
+                    height: 18px;
+                }
+                @media (max-width: 400px) {
+                    width: 6px;
+                    height: 17px;
+                }
+                @media (max-width: 360px) {
+                    width: 6px;
+                    height: 16px;
+                }
+                @media (max-width: 320px) {
+                    width: 5px;
+                    height: 15px;
+                }
             }
         }
     }
@@ -115,16 +148,22 @@
         opacity: 1 !important;
         }
     }
+
     &_container
     {
         background-color: white;
         box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
-        margin: 40px 60px;
+        width: 650px;
+        margin: 40px auto;
         display: grid;
         grid-template-columns: 80px 1fr;
-        grid-template-rows: 80px 80px 1fr auto auto;
+        grid-template-rows: 80px auto 25px auto auto;
         grid-column-gap: 0px;
-        grid-row-gap: 0px
+        grid-row-gap: 0px;
+        @media (max-width: 650px) {
+            width: 100%;
+        }
+        
     }
     &_stat
     {
@@ -155,6 +194,21 @@
         {
             font-size: 26px;
             font-weight: 500;
+            @media (max-width: 480px) {
+                font-size: 24px;
+            }
+            @media (max-width: 440px) {
+                font-size: 22px;
+            }
+            @media (max-width: 400px) {
+                font-size: 20px;
+            }
+            @media (max-width: 360px) {
+                font-size: 18px;
+            }
+            @media (max-width: 320px) {
+                font-size: 16px;
+            }
         }
         &_subtitle
         {
@@ -172,7 +226,22 @@
         justify-content: center;
         align-content: stretch;
         align-items: center;
-
+        height: 80px;
+        @media (max-width: 650px) {
+            margin: 0 15px;
+        }
+        @media (max-width: 520px) {
+            margin-top: -8px;
+            height: 70px;
+        }
+        @media (max-width: 440px) {
+            margin-top: -8px;
+            height: 60px;
+        }
+        @media (max-width: 320px) {
+            margin-bottom: 5px;
+            height: 50px;
+        }
         div.bar
         {
             height: 50px;
@@ -181,19 +250,37 @@
             margin: 5px;
             background-color: #c1c1c1;
             box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
-            &.status_ok
-            {
-                background-color: #2ECC40;
+            @media (max-width: 650px) {
+                margin: 5px auto;
             }
-            &.status_bad
-            {
-                background-color: #FF4136;
+            @media (max-width: 600px) {
+                width: 9px;
+                height: 45px;
             }
-            &.status_warning
-            {
-                background-color: #FF851B;
+            @media (max-width: 520px) {
+                width: 8px;
+                height: 42.5px;
             }
-            
+            @media (max-width: 480px) {
+                width: 7px;
+                height: 40px;
+            }
+            @media (max-width: 440px) {
+                width: 7px;
+                height: 35px;
+            }
+            @media (max-width: 400px) {
+                width: 6px;
+                height: 35px;
+            }
+            @media (max-width: 360px) {
+                width: 6px;
+                height: 33px;
+            }
+            @media (max-width: 320px) {
+                width: 5px;
+                height: 33px;
+            }
         }
     }
     &_tip
