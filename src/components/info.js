@@ -1,5 +1,5 @@
 import React from "react"
-import containerStyles from "../styles/components/info.module.scss"
+import style from "../styles/components/info.module.scss"
 import queryString from 'query-string';
 
 export default class Info extends React.Component
@@ -18,7 +18,7 @@ export default class Info extends React.Component
         if(status != false)
         {
             return(
-                <div className={containerStyles.info_container}>
+                <div id={style.info}>
                     <p>Wykryto, że usługa <b>{status}</b></p>
                     <p>do której chciałeś uzyskać dostęp, ma problemy.</p>
                     <p>Przepraszamy za utrudnienia.</p>
