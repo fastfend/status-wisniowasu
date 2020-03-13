@@ -5,6 +5,8 @@ import monitors_file from '../../monitors.json'
 import ReactTooltip from 'react-tooltip'
 import Loader from 'react-loaders'
 import '../styles/components/loader.scss';
+import Error_Img from '../images/icons/icons8-high-priority-50.png';
+import Ok_Img from '../images/icons/icons8-checked-50.png';
 import down_arrow from '../images/down.svg';
 import StatusCategorySubBox from '../components/statuscategorysubbox';
 import AnimateHeight from 'react-animate-height';
@@ -17,7 +19,8 @@ export default class StatusCategoryBox extends React.Component
             boxes: [],
             statuses: [],
             loading: true,
-            opened: false
+            opened: false,
+            status: <Loader className={containerStyles.status_stat_loading} type="ball-scale-ripple" active={true} />
         }
         this.clickOpenGroup = this.clickOpenGroup.bind(this);
       }
@@ -125,7 +128,8 @@ export default class StatusCategoryBox extends React.Component
                 boxes: this.createStatus(data),
                 statuses: this.createSubStatus(data),
                 loading: false,
-                opened: false
+                opened: false,
+                status: this.getStatus(data)
               })
             ReactTooltip.rebuild()
         });
@@ -136,10 +140,22 @@ export default class StatusCategoryBox extends React.Component
         this.setState({ opened: !this.state.opened })
     }
 
+    getStatus(data)
+    {
+        if (data.status === 9 || data.status === 8 )
+        {
+            return <img src={Error_Img} className={containerStyles.status_stat}></img>;
+        }
+        else
+        {
+            return <img src={Ok_Img} className={containerStyles.status_stat}></img>;
+        }
+    }
+
     render() {
         return(
             <div className={containerStyles.status_container}>
-                <div className={[containerStyles.status_stat,containerStyles.status_stat_ok].join(" ")}></div>
+                {this.state.status}
                 <div className={containerStyles.status_name}>
                     <span className={containerStyles.status_name_title}>{this.props.title}</span>
                 </div>

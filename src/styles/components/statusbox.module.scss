@@ -129,16 +129,19 @@
     &_stat
     {
         grid-area: 1 / 1 / 2 / 2;
-        width: calc(100% - 40px);
-        height: calc(100% - 40px);
-        background-position: center;
-        background-size: cover;
-        margin: 20px;
-    
-        &_ok
-        { 
-            background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6b/Check_green_circle.svg);
-        }
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        object-position: center;
+        object-fit: cover;
+        margin: 15px;
+    }
+    &_stat_loading
+    {
+        grid-area: 1 / 1 / 2 / 2;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        margin: 15px;
+        transform: scale(0.8) !important;
     }
     &_name
     {

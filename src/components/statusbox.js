@@ -5,6 +5,8 @@ import monitors from '../../monitors.json'
 import ReactTooltip from 'react-tooltip'
 import Loader from 'react-loaders'
 import '../styles/components/loader.scss';
+import Error_Img from '../images/icons/icons8-high-priority-50.png';
+import Ok_Img from '../images/icons/icons8-checked-50.png';
 export default class StatusBox extends React.Component
 {
     constructor(props) {
@@ -12,7 +14,8 @@ export default class StatusBox extends React.Component
         this.state = 
         {
             boxes: [],
-            loading: true
+            loading: true,
+            status: <Loader className={containerStyles.status_stat_loading} type="ball-scale-ripple" active={true} />
         }
       }
 
@@ -76,17 +79,29 @@ export default class StatusBox extends React.Component
         .then((data) => {
             this.setState({
                 boxes: this.createStatus(data),
-                loading: false
+                loading: false,
+                status: this.getStatus(data)
               })
             ReactTooltip.rebuild()
         });
     }
 
+    getStatus(data)
+    {
+        if (data.status === 9 || data.status === 8 )
+        {
+            return <img src={Error_Img} className={containerStyles.status_stat}></img>;
+        }
+        else
+        {
+            return <img src={Ok_Img} className={containerStyles.status_stat}></img>;
+        }
+    }
+
     render() {
         return(
             <div className={containerStyles.status_container}>
-                
-                <div className={[containerStyles.status_stat,containerStyles.status_stat_ok].join(" ")}></div>
+                {this.state.status}
                 <div className={containerStyles.status_name}>
                     <span className={containerStyles.status_name_title}>{this.props.title}</span>
                     <span className={containerStyles.status_name_subtitle}>{this.props.subtitle}</span>
