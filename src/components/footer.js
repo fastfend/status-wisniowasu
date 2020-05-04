@@ -20,7 +20,7 @@ export default class Footer extends React.Component
                 <a className={containerStyles.youtube} href="https://youtube.wisniowasu.pl" target="_blank"></a>
                 <a className={containerStyles.discord} href="https://discord.wisniowasu.pl" target="_blank"></a>
                 </div>
-                <p>Made by <a target="_blank" href="https://github.com/fastfend">Piotr Stadnicki</a> | Source code on <a target="_blank" href="https://github.com/fastfend/homepage-wisniowasu">GitHub</a></p>
+                <p>Made by <a target="_blank" href="https://github.com/fastfend">Piotr Stadnicki</a> | Source code on <a target="_blank" href="https://github.com/fastfend/status-wisniowasu">GitHub</a></p>
                 <p>Ikony wykorzystane z <a target="_blank" rel="noopener" href="https://icons8.com">Icons8</a></p>
                 <p>wersja {packageJson.version}</p>
             </footer>

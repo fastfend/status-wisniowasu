@@ -142,7 +142,17 @@ export default class StatusCategoryBox extends React.Component
 
     getStatus(data)
     {
-        if (data.status === 9 || data.status === 8 )
+        var errorstats = 0;
+        for(var i = 0; i < data.length; i++)
+        {
+            var monitor = data[i];
+            if (monitor.status === 9 || monitor.status === 8 )
+            {
+                errorstats++;
+            }
+        }
+        
+        if (errorstats != 0)
         {
             return <img src={Error_Img} className={containerStyles.status_stat}></img>;
         }
