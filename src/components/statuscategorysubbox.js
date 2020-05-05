@@ -21,7 +21,7 @@ export default class StatusCategorySubBox extends React.Component
             }
             else
             {
-                var uptime = "Data: " + now.getDate() + " " + now.toLocaleString('default', { month: 'long' }) + " Uptime: " + uptimes[i] + "%";
+                var uptime = now.getDate() + " " + now.toLocaleString('default', { month: 'long' }) + "\nUptime: " + Math.floor(uptimes[i]*100)/100 + "%";
                 render.unshift(<div data-for={this.props.data.title} data-tip={uptime} className={containerStyles.bar} style={{background: 'linear-gradient(0deg, rgb(46,204,64)' + uptimes[i] + '%, rgb(255,65,54) '  + uptimes[i] + '%)'}}></div>)
                 now.setDate(now.getDate() - 1);
             }

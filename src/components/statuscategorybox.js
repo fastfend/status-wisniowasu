@@ -68,7 +68,7 @@ export default class StatusCategoryBox extends React.Component
             }
             else
             {
-                var uptime = "Data: " + now.getDate() + " " + now.toLocaleString('default', { month: 'long' }) + " Uptime: " + final_uptimes[i] + "%";
+                var uptime = now.getDate() + " " + now.toLocaleString('default', { month: 'long' }) + "\nUptime: " + Math.floor(final_uptimes[i]*100)/100 + "%";
                 render.unshift(<div data-for={this.props.title} data-tip={uptime} className={containerStyles.bar} style={{background: 'linear-gradient(0deg, rgb(46,204,64)' + final_uptimes[i] + '%, rgb(255,65,54) '  + final_uptimes[i] + '%)'}}></div>)
                 now.setDate(now.getDate() - 1);
             }
