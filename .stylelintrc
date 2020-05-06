@@ -1,5 +1,9 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": 
+  [
+    "stylelint-config-prettier",
+    "stylelint-config-standard"
+  ],
   "ignoreFiles": [
     "node_modules/**",
     "**/*.json",
