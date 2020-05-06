@@ -1,12 +1,16 @@
 $primary-color: #c1c1c1;
+
 @import 'loaders.css/src/animations/line-scale.scss';
 @import 'loaders.css/src/animations/ball-scale-ripple.scss';
-.loader{
-    transform: scale(1.25);
+
+.loader {
+  transform: scale(1.25);
 }
+
 .loader-hidden {
   display: none;
 }
+
 .loader-active {
   display: block;
 }

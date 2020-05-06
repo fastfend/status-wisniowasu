@@ -1,18 +1,18 @@
-#info
-{
-    background-color: #ffbb33;
-    box-shadow: 0px 5px 15px 0px rgba(172, 125, 32, 0.32);
-    margin: 40px 60px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    height: 120px;
-    color: #794100;
-    font-size: 18px;
-    p {
-        margin: 0;
-    }
+#info {
+  background-color: #fb3;
+  box-shadow: 0 5px 15px 0 rgba(172, 125, 32, 0.32);
+  margin: 40px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: 120px;
+  color: #794100;
+  font-size: 18px;
+
+  p {
+    margin: 0;
+  }
 }

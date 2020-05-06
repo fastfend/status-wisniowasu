@@ -1,91 +1,90 @@
 footer {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 80px 0 0 0;
+  padding-bottom: 20px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 20px 20px whitesmoke;
+
+  .logo {
+    background-image: url('../../images/powered_logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 300px;
+    filter: grayscale(1);
+    opacity: 0.6;
+    margin: 20px;
+    margin-bottom: 40px;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .logo:hover {
+    opacity: 1;
+  }
+
+  p {
+    margin: 3px;
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    a {
+      color: rgba(0, 0, 0, 0.4);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  p.poweredby {
+    margin-bottom: -10px;
+  }
+
+  div.icons {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 80px 0 0 0;
-    padding-bottom: 20px;
-    background-color: whitesmoke;
-    box-shadow: 0px 0px 20px 20px whitesmoke;
 
-    .logo {
-        background-image: url("../../images/powered_logo.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 60px;
-        width: 300px;
-        filter: grayscale(1);
-        opacity: 0.6;
-        margin: 20px;
-        margin-bottom: 40px;
-        transition: opacity 0.2s ease-in-out;
+    a {
+      margin: 5px;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-size: contain;
+      filter: grayscale(1);
+      transition: filter 0.06s ease-in-out;
     }
 
-    .logo:hover {
-        opacity: 1;
+    a:hover {
+      filter: grayscale(0);
     }
 
-    div.icons {
-        width: 100%;
-        margin-bottom: 10px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-
-        a {
-            margin: 5px;
-            display: block;
-            width: 32px;
-            height: 32px;
-            background-size: contain;
-            filter: grayscale(1);
-            transition: filter 0.06s ease-in-out;
-        }
-
-        a:hover {
-            filter: grayscale(0);
-        }
-
-        a.instagram {
-            background-image: url("../../images/icons/icons8-instagram-100.png");
-        }
-
-        a.facebook {
-            background-image: url("../../images/icons/icons8-facebook-100.png");
-        }
-
-        a.youtube {
-            background-image: url("../../images/icons/icons8-play-button-100.png");
-        }
-
-        a.discord {
-            background-image: url("../../images/icons/icons8-discord-100.png");
-        }
+    a.instagram {
+      background-image: url('../../images/icons/icons8-instagram-100.png');
     }
 
-
-    p {
-        margin: 3px;
-        color: rgba(0, 0, 0, 0.4);
-        text-align: center;
-        
-        a {
-            color: rgba(0, 0, 0, 0.4);
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: rgba(0, 0, 0, 0.8);
-        }
+    a.facebook {
+      background-image: url('../../images/icons/icons8-facebook-100.png');
     }
 
-    p.poweredby {
-        margin-bottom: -10px;
+    a.youtube {
+      background-image: url('../../images/icons/icons8-play-button-100.png');
     }
+
+    a.discord {
+      background-image: url('../../images/icons/icons8-discord-100.png');
+    }
+  }
 }

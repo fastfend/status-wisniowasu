@@ -1,0 +1,18 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": [
+    "node_modules/**",
+    "**/*.json",
+    "**/*.test.js",
+    "**/*.html",
+    "**/*.svg",
+    "**/*.png",
+    "**/*.jpg"
+  ],
+  "rules": {
+    "no-empty-source": null,
+    "declaration-empty-line-before": null,
+    "no-missing-end-of-source-newline": null,
+    "value-keyword-case": null
+  }
+}
