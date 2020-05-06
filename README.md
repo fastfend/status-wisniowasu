@@ -5,7 +5,7 @@
 [![HitCount](http://hits.dwyl.com/fastfend/status-wisniowasu.svg)](http://hits.dwyl.com/fastfend/status-wisniowasu)
 [Demo Page](https://status.wisniowasu.pl/)
 
-![Strona](https://github.com/fastfend/homepage-wisniowasu/raw/master/github/image.jpg)
+![Strona](https://github.com/fastfend/status-wisniowasu/raw/master/github/image.jpg)
 
 ## Benefits
 
