@@ -3,7 +3,13 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: ['plugin:react/recommended', 'standard', 'prettier'],
+  parser: 'babel-eslint',
+  extends: [
+    'prettier',
+    'prettier/standard',
+    'prettier/react',
+    'plugin:react/recommended',
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -11,12 +17,24 @@ module.exports = {
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      modules: true,
     },
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier'],
+  plugins: ['prettier'],
   rules: {
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx'],
+      },
+    ],
     'prettier/prettier': ['error'],
+  },
+  env: {
+    jest: true,
+    browser: true,
+    node: true,
   },
 };

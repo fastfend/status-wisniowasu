@@ -1,25 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background: whitesmoke;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 body {
-    div#___gatsby 
-    {
-        width: 100%;
-        height: 100%;
+  div#___gatsby {
+    width: 100%;
+    height: 100%;
 
-        div#gatsby-focus-wrapper
-        {
-            width: 100%;
-            height: 100%; 
-        }
+    div#gatsby-focus-wrapper {
+      width: 100%;
+      height: 100%;
     }
+  }
 }

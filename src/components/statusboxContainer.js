@@ -23,7 +23,7 @@ export default class StatusBoxContainer extends React.Component {
   }
 
   render() {
-    const statusBoxes = settings.monitors.map(element => {
+    const statusBoxes = settings.monitors.map((element) => {
       if (element.type === 'standalone') {
         return (
           <StatusBox

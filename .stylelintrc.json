@@ -1,6 +1,5 @@
 {
-  "extends": 
-  [
+  "extends": [
     "stylelint-config-prettier",
     "stylelint-config-standard"
   ],
@@ -17,6 +16,8 @@
     "no-empty-source": null,
     "declaration-empty-line-before": null,
     "no-missing-end-of-source-newline": null,
-    "value-keyword-case": null
+    "value-keyword-case": null,
+    "no-descending-specificity": null,
+    "declaration-colon-newline-after": null
   }
 }

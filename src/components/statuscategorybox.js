@@ -135,7 +135,7 @@ export default class StatusCategoryBox extends React.Component {
 
   componentDidMount() {
     this.getStatusData(this.props.monitors, this.props.timeset).then(
-      data => {
+      (data) => {
         this.setState({
           boxes: this.createStatus(data),
           statuses: this.createSubStatus(data),
