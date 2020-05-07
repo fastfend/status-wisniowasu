@@ -6,6 +6,7 @@ import Footer from '../components/footer';
 import StatusBoxContainer from '../components/statusboxContainer';
 import InfoBox from '../components/info';
 import { Location } from '@reach/router';
+import PropTypes from 'prop-types';
 
 export default function Index({ data }) {
   return (
