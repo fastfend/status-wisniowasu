@@ -116,6 +116,7 @@ export default class StatusBox extends React.Component {
         <img
           src={ErrorImg}
           className={containerStyles.status_stat}
+          alt="Usługa niesprawna"
         ></img>
       );
     } else {
@@ -123,6 +124,7 @@ export default class StatusBox extends React.Component {
         <img
           src={OkImg}
           className={containerStyles.status_stat}
+          alt="Usługa sprawna"
         ></img>
       );
     }

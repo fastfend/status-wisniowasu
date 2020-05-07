@@ -166,6 +166,7 @@ export default class StatusCategoryBox extends React.Component {
         <img
           src={ErrorImg}
           className={containerStyles.status_stat}
+          alt="Usługi niesprawne"
         ></img>
       );
     } else {
@@ -173,6 +174,7 @@ export default class StatusCategoryBox extends React.Component {
         <img
           src={OkImg}
           className={containerStyles.status_stat}
+          alt="Usługi sprawne"
         ></img>
       );
     }
@@ -232,6 +234,7 @@ export default class StatusCategoryBox extends React.Component {
               containerStyles.status_more_icon,
               this.state.opened ? containerStyles.on : null,
             ].join(' ')}
+            alt="Pokaż więcej usług"
           ></img>
         </div>
         <div className={containerStyles.status_more_container}>
