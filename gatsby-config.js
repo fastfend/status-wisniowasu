@@ -5,7 +5,7 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.status.wisniowasu.pl`,
+    siteUrl: `https://status.wisniowasu.pl`,
   },
   plugins: [
     {
