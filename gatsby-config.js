@@ -4,21 +4,26 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.status.wisniowasu.pl`,
+  },
   plugins: [
     {
-      resolve: 'gatsby-plugin-sass',
+      resolve: `gatsby-plugin-sass`,
       options: {
         useResolveUrlLoader: true,
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'images',
+        name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    `gatsby-plugin-sitemap`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
   ],
 };
