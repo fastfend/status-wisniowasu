@@ -38,15 +38,11 @@ export default class StatusCategoryBox extends React.Component {
       var tempdata = data[i].custom_uptime_ranges.split('-');
       for (var x = 0; x < tempdata.length; x++) {
         var val = parseFloat(tempdata[x]);
-        if (val === 0) {
-          continue;
+        if (uptimes[x] === undefined) {
+          uptimes[x] = { count: 1, value: val };
         } else {
-          if (uptimes[x] === undefined) {
-            uptimes[x] = { count: 1, value: val };
-          } else {
-            uptimes[x].count = uptimes[x].count + 1;
-            uptimes[x].value = uptimes[x].value + val;
-          }
+          uptimes[x].count = uptimes[x].count + 1;
+          uptimes[x].value = uptimes[x].value + val;
         }
       }
     }
