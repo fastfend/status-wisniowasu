@@ -4,6 +4,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d40bf80f9df443daaf49ad417e7f49a3)](https://www.codacy.com/manual/fastfend/status-wisniowasu?utm_source=github.com&utm_medium=referral&utm_content=fastfend/status-wisniowasu&utm_campaign=Badge_Grade)
 [![HitCount](http://hits.dwyl.com/fastfend/status-wisniowasu.svg)](http://hits.dwyl.com/fastfend/status-wisniowasu)
 [Demo Page](https://status.wisniowasu.pl/)
+[License](https://github.com/fastfend/status-wisniowasu/blob/master/LICENSE.md)
 
 ![Strona](https://github.com/fastfend/status-wisniowasu/raw/master/github/image.jpg)
 
