@@ -11,7 +11,7 @@
 
 - Static page, so no backend requried
 - You can host it anywhere you want eg. Netlify
-- Proffesional design
+- Professional design
 - Status categories
 
 ## Requirements
