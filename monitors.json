@@ -35,33 +35,6 @@
         },
         {
             "type": "group",
-            "title": "Usługi CherryCraft",
-            "monitors":
-            [
-                {
-                    "id": "784472953",
-                    "title": "Serwer MC"
-                },
-                {
-                    "id": "784492443",
-                    "title": "Strona główna"
-                },
-                {
-                    "id": "784492444",
-                    "title": "Baza danych"
-                },
-                {
-                    "id": "784492471",
-                    "title": "Dynmapa"
-                },
-                {
-                    "id": "784492450",
-                    "title": "Analityka"
-                }
-            ]
-        },
-        {
-            "type": "group",
             "title": "Usługi API Wiśnowa SU",
             "monitors":
             [
