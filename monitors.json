@@ -24,10 +24,6 @@
                     "title": "System linkow"
                 },
                 {
-                    "id": "784472959",
-                    "title": "System haseł"
-                },
-                {
                     "id": "784472962",
                     "title": "System feedback'u"
                 }
@@ -60,19 +56,10 @@
             ]
         },
         {
-            "type": "group",
+            "type": "standalone",
+            "id": "784469773",
             "title": "Serwerownia",
-            "monitors":
-            [
-                {
-                    "id": "784469769",
-                    "title": "Urządzenia dostawcy"
-                },
-                {
-                    "id": "784469773",
-                    "title": "Router brzegowy"
-                }
-            ]
+            "subtitle" : "Router brzegowy"
         }
     ]
 }
