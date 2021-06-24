@@ -58,12 +58,6 @@
                     "title": "Router brzegowy"
                 }
             ]
-        },
-        {
-            "type": "standalone",
-            "id": "784469773",
-            "title": "Serwerownia",
-            "subtitle" : "Router brzegowy"
         }
     ]
 }
