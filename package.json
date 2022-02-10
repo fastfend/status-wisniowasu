@@ -28,7 +28,7 @@
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-sharp": "^2.3.14",
     "loaders.css": "^0.1.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "query-string": "^6.11.1",
     "react": "^16.13.1",
     "react-animate-height": "^2.0.20",
